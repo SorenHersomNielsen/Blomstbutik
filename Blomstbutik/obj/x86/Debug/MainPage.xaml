@@ -1,0 +1,33 @@
+﻿<Page x:ConnectionId='1'
+    x:Class="Blomstbutik.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Blomstbutik"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <ListView x:ConnectionId='2'
+                                                        
+        Margin="516,303,425,311"                                             >
+    <ListView.ItemTemplate>
+
+            <DataTemplate                               >
+
+                <StackPanel x:ConnectionId='4' Orientation="Horizontal">
+
+                        <TextBox x:ConnectionId='5'                                  />
+
+                        <TextBlock x:ConnectionId='6'                                   />
+
+                        <TextBlock x:ConnectionId='7'                                  />
+
+                    </StackPanel>
+
+                </DataTemplate>
+
+            </ListView.ItemTemplate>
+    </ListView>
+
+</Page>
+
