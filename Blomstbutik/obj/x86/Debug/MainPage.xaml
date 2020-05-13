@@ -7,27 +7,38 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-    <ListView x:ConnectionId='2'
+    <Grid>
+        <ListView x:ConnectionId='2'
+                                                                          
                                                         
         Margin="516,303,425,311"                                             >
-    <ListView.ItemTemplate>
+            <ListView.ItemTemplate>
 
-            <DataTemplate                               >
+                <DataTemplate                               >
 
-                <StackPanel x:ConnectionId='4' Orientation="Horizontal">
+                    <StackPanel x:ConnectionId='10' Orientation="Horizontal">
+                        <TextBox x:ConnectionId='11'                                  />
 
-                        <TextBox x:ConnectionId='5'                                  />
+                        <TextBlock x:ConnectionId='12'                                   />
 
-                        <TextBlock x:ConnectionId='6'                                   />
-
-                        <TextBlock x:ConnectionId='7'                                  />
-
+                        <TextBlock x:ConnectionId='13'                                   />
                     </StackPanel>
 
                 </DataTemplate>
 
             </ListView.ItemTemplate>
-    </ListView>
+        </ListView>
 
+        <TextBox x:ConnectionId='3' HorizontalAlignment="Left" Margin="120,500,0,0" Description="Navn"                                                              TextWrapping="Wrap" VerticalAlignment="Top"/>
+
+        <TextBox x:ConnectionId='4' HorizontalAlignment="Left" Margin="216,500,0,0" Description="Antal"                                                               TextWrapping="Wrap" VerticalAlignment="Top"/>
+
+        <TextBox x:ConnectionId='5' HorizontalAlignment="Left" Margin="301,500,0,0" Description="Farve"                                                               TextWrapping="Wrap" VerticalAlignment="Top"/>
+
+        <Button x:ConnectionId='6'                                                            Content="Tilføj Blomst" Height="47" Margin="120,582,0,0" VerticalAlignment="Top" Width="110"/>
+        <Button x:ConnectionId='7'                                                                       Content="Slet Blomst" Height="47" Margin="259,582,0,0" VerticalAlignment="Top" Width="106"/>
+        <Button x:ConnectionId='8'                                                                  Content="slet Liste" Height="47" Margin="259,660,0,0" VerticalAlignment="Top" Width="106"/>
+
+    </Grid>
 </Page>
 

@@ -7,26 +7,37 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-    <ListView
+    <Grid>
+        <ListView
+        SelectedItem="{x:Bind BlomstViewModel.SelectedBlomst,Mode=TwoWay}"
        ItemsSource ="{x:Bind BlomstViewModel.OC_Blomst}"
         Margin="516,303,425,311" SelectionChanged="ListView_SelectionChanged">
-    <ListView.ItemTemplate>
+            <ListView.ItemTemplate>
 
-            <DataTemplate x:DataType="local:Ordreblomst">
+                <DataTemplate x:DataType="local:Ordreblomst">
 
-                <StackPanel Orientation="Horizontal">
-
+                    <StackPanel Orientation="Horizontal">
                         <TextBox Text="{x:Bind Navn, Mode=TwoWay}"/>
 
                         <TextBlock Text="{x:Bind Antal, Mode=TwoWay}"/>
 
-                        <TextBlock Text="{x:Bind Farve,Mode=TwoWay}"/>
-
+                        <TextBlock Text="{x:Bind Farve, Mode=TwoWay}"/>
                     </StackPanel>
 
                 </DataTemplate>
 
             </ListView.ItemTemplate>
-    </ListView>
+        </ListView>
 
+        <TextBox HorizontalAlignment="Left" Margin="120,500,0,0" Description="Navn" Text="{x:Bind Path=BlomstViewModel.NavnBlomst, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top"/>
+
+        <TextBox HorizontalAlignment="Left" Margin="216,500,0,0" Description="Antal" Text="{x:Bind Path=BlomstViewModel.AntalBlomst, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top"/>
+
+        <TextBox HorizontalAlignment="Left" Margin="301,500,0,0" Description="Farve" Text="{x:Bind Mode=TwoWay, Path=BlomstViewModel.FarveBlomst}" TextWrapping="Wrap" VerticalAlignment="Top"/>
+
+        <Button Command="{x:Bind BlomstViewModel.AddNyBlomst,Mode=OneWay}" Content="Tilføj Blomst" Height="47" Margin="120,582,0,0" VerticalAlignment="Top" Width="110"/>
+        <Button Command="{x:Bind BlomstViewModel.SelectedBlomstCommand, Mode=TwoWay}" Content="Slet Blomst" Height="47" Margin="259,582,0,0" VerticalAlignment="Top" Width="106"/>
+        <Button Command="{x:Bind BlomstViewModel.SletListeCommand, Mode=TwoWay}" Content="slet Liste" Height="47" Margin="259,660,0,0" VerticalAlignment="Top" Width="106"/>
+
+    </Grid>
 </Page>

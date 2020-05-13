@@ -30,11 +30,14 @@ namespace Blomstbutik
         }
 
 
-        public Ordreblomst(string navn, string farve , int antal)
+        public Ordreblomst(string navn, int antal, string farve)
         {
             this.Navn = navn;
             this.Antal = antal;
             this.Farve = farve;
+        }
+        public Ordreblomst()
+        {
 
         }
     }
